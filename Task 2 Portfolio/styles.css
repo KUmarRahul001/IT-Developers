@@ -1,0 +1,373 @@
+/* Container for logo and navigation */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #ffffff;
+}
+
+/* Logo styling */
+.logo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    color: #631196;
+    letter-spacing: 4px;
+    font-weight: 100;
+    margin-right: 20px;
+}
+
+/* Navigation styling */
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav ul li {
+    margin-left: 20px;
+}
+
+.nav ul li a {
+    color: #631196;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav ul li a:hover {
+    color: #679611;
+}
+
+/* Hero section styling */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh; /* Changed from height to min-height */
+    background-color: #f7f7f7;
+    padding: 20px;
+    box-sizing: border-box; /* Added this to include padding in height calculations */
+}
+
+
+.hero-content {
+    width: 50%;
+    margin-right: 20px;
+}
+
+.hero-content h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-image {
+    width: 50%;
+    height: 50%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.card {
+    width: fit-content;
+    height: fit-content;
+    background-color: rgb(238, 238, 238);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 30px ;
+    gap: 3px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
+}
+
+/* for all social containers*/
+.socialContainer {
+    width: 52px;
+    height: 52px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+}
+
+/* instagram*/
+.containerOne:hover {
+    background-color: #d62976;
+    transition-duration: .3s;
+}
+
+/* twitter*/
+.containerTwo:hover {
+    background-color: #00acee;
+    transition-duration: .3s;
+}
+
+/* linkdin*/
+.containerThree:hover {
+    background-color: #0072b1;
+    transition-duration: .3s;
+}
+
+/* Whatsapp*/
+.containerFour:hover {
+    background-color: #128C7E;
+    transition-duration: .3s;
+}
+
+.socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+}
+
+.socialSvg {
+    width: 17px;
+}
+
+.socialSvg path {
+    fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+        height: auto; /* Adjust height for mobile */
+    }
+
+    .hero-content {
+        width: 100%; /* Full width on smaller screens */
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    .hero-image {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .hero-image img {
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+.cta {
+    position: relative;
+    margin: auto;
+    padding: 11.5px 18px;
+    transition: all 0.2s ease;
+    border: 3px solid #552da8;
+    border-radius: 50px;
+    background: #552da8;
+    cursor: pointer;
+}
+
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    border-radius: 50px;
+    background: white;
+    width: 45px;
+    height: 45px;
+    transition: all 0.8s ease;
+}
+
+.cta span {
+    position: relative;
+    font-family: Montserrat;
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+.cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: white;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.5s ease;
+}
+
+.cta:hover:before {
+    width: 100%;
+    background: #1c1c1c;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+    transition: all 2s ease;
+}
+
+.cta:active {
+    transform: scale(0.95);
+    transition: all 2s ease;
+}
+
+
+.cta {
+    position: relative;
+    margin: auto;
+    padding: 11.5px 18px;
+    transition: all 0.2s ease;
+    border: 3px solid #552da8;
+    border-radius: 50px;
+    background: #552da8;
+    cursor: pointer;
+}
+
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    border-radius: 50px;
+    background: white;
+    width: 45px;
+    height: 45px;
+    transition: all 0.8s ease;
+}
+
+.cta span {
+    position: relative;
+    font-family: Montserrat;
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+.cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: white;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.5s ease;
+}
+
+.cta:hover:before {
+    width: 100%;
+    background: #1c1c1c;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+    transition: all 2s ease;
+}
+
+.cta:active {
+    transform: scale(0.95);
+    transition: all 2s ease;
+}
+
+
+.res {
+    position: relative;
+    margin: auto;
+    padding: 11.5px 18px;
+    transition: all 0.2s ease;
+    border: 3px solid #552da8;
+    border-radius: 50px;
+    background: #552da8;
+    cursor: pointer;
+}
+
+.res:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    border-radius: 50px;
+    background: white;
+    width: 45px;
+    height: 45px;
+    transition: all 0.8s ease;
+}
+
+.res span {
+    position: relative;
+    font-family: Montserrat;
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+.res svg {
+    position: relative;
+    top: 0;
+    margin-left: 10px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: white;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.5s ease;
+}
+
+.res:hover:before {
+    width: 100%;
+    background: #1c1c1c;
+}
+
+.res:hover svg {
+    transform: translateX(0);
+    transition: all 2s ease;
+}
+
+.res:active {
+    transform: scale(0.95);
+    transition: all 2s ease;
+}
+
+/* Add this to your existing CSS */
+.button-container {
+    display: flex; /* Use flexbox to arrange buttons in a row */
+    justify-content: left; /* Center buttons horizontally */
+    gap: 5px; /* Space between buttons */
+    margin-top: 10px; /* Top margin for spacing */
+    background-color: #F7F7F7;
+}
